@@ -1,0 +1,13 @@
+.addNotes {
+    float: right;
+    margin-right: 4rem;
+    margin-top: -2.6rem;
+    cursor: pointer;
+}
+
+.notesedit {
+	display: none;
+	margin-left:45px;
+	width: 80%;
+	
+}

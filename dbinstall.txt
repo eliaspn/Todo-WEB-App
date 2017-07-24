@@ -1,0 +1,19 @@
+CREATE TABLE `tasks` (
+ `id` bigint(20) NOT NULL AUTO_INCREMENT,
+ `completed` varchar(10) DEFAULT NULL,
+ `notes` varchar(256) DEFAULT NULL,
+ `title` varchar(50) NOT NULL,
+ `user_id` bigint(20) NOT NULL,
+ PRIMARY KEY (`id`),
+ KEY `user_id` (`user_id`),
+ CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=latin1
+
+
+CREATE TABLE `users` (
+ `id` bigint(20) NOT NULL AUTO_INCREMENT,
+ `request_ip` varchar(39) NOT NULL,
+ `is_active` tinyint(4) NOT NULL DEFAULT '1',
+ `signup_datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1
